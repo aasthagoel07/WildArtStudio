@@ -1,0 +1,45 @@
+.background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.header
+{
+   background-color: #AE0712;
+}
+
+.header_text {
+    width: auto;
+    color: white;
+    line-height: 50px;
+    font-family: Roboto;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.heading
+{
+    color: #AE0712;
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 50px;
+    margin-left: 30px;
+}
+
+.footer
+{
+    background-color: #AE0712;
+    line-height: 120px;
+}
+
+.body
+{
+    font-size: 30px;
+    font-weight: bolder;
+    color: #E40712;
+    font-family: Roboto;
+    margin-left: 30px;
+}
