@@ -11,7 +11,8 @@
 .background
 {
     background-color: #AE0712;
-    position:fixed;
+    position: relative;
+    overflow-x: hidden;
     top:0;
     right:0;
     bottom:0;
