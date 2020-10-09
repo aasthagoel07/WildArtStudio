@@ -1,4 +1,5 @@
-import { Component, VERSION } from '@angular/core';
+import { Component, Inject, VERSION } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -8,7 +9,9 @@ import { ActivatedRoute } from '@angular/router';
 export class ProjectComponent {
     currentHours = new Date().getHours();
     greet_message = "";
-    constructor(private activateroute: ActivatedRoute) { }
+    constructor(public dialogRef: MatDialogRef<ProjectComponent>,
+        @Inject(MAT_DIALOG_DATA) public data: any,
+        private activateroute: ActivatedRoute) { }
     showDetails() {
         if (this.currentHours < 12) {
             this.greet_message = 'Good Morning';
@@ -20,6 +23,10 @@ export class ProjectComponent {
             this.greet_message = 'Good Evening';
         }
         return this.greet_message;
+    }
+
+    closeDialog(){
+        this.dialogRef.close();
     }
 }
 

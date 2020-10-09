@@ -1,5 +1,7 @@
 import { Component, VERSION } from '@angular/core';
-import {ActivatedRoute} from '@angular/router'
+import {ActivatedRoute} from '@angular/router';
+import { MatDialog } from "@angular/material/dialog";
+import { ProjectComponent } from 'src/project/project.component';
 
 
 @Component({
@@ -7,7 +9,12 @@ import {ActivatedRoute} from '@angular/router'
   styleUrls: [ './work.component.css' ]  
   })
 export class WorkComponent  {
-  constructor(private activatedroute:ActivatedRoute)
+  constructor(public dialog: MatDialog,
+    private activatedroute:ActivatedRoute)
   {}
+  openDialog(){
+    console.log("Dialog");
+    const dialogRef = this.dialog.open(ProjectComponent);
+  }
 }
 
