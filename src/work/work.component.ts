@@ -14,8 +14,8 @@ export class WorkComponent  {
   {}
   openDialog(){
     this.dialog.open(ProjectComponent,{
-      width: "1200px",
-      height: "600px"
+      width: "800px",
+      height: "500px"
     });
   }
 }

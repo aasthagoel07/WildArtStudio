@@ -19,8 +19,8 @@ export class HomeComponent  {
 
   openDialog(){
     this.dialog.open(ProjectComponent,{
-      width: "1200px",
-      height: "600px"
+      width: "800px",
+      height: "500px"
     });
   }
 
