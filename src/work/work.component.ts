@@ -13,8 +13,10 @@ export class WorkComponent  {
     private activatedroute:ActivatedRoute)
   {}
   openDialog(){
-    console.log("Dialog");
-    const dialogRef = this.dialog.open(ProjectComponent);
+    this.dialog.open(ProjectComponent,{
+      width: "1200px",
+      height: "600px"
+    });
   }
 }
 

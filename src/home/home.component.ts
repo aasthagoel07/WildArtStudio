@@ -1,5 +1,7 @@
 import { Component, VERSION } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import {Router} from '@angular/router';
+import { ProjectComponent } from 'src/project/project.component';
 
 @Component({
   templateUrl: './home.component.html',
@@ -7,11 +9,19 @@ import {Router} from '@angular/router';
   })
 export class HomeComponent  {
   name = 'Angular ' + VERSION.major;
-  constructor(private router:Router)
+  constructor(public dialog: MatDialog,
+    private router:Router)
   {}
   showDetails()
   {
     //this.router.navigateByUrl('hello');
+  }
+
+  openDialog(){
+    this.dialog.open(ProjectComponent,{
+      width: "1200px",
+      height: "600px"
+    });
   }
 
 }

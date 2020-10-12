@@ -1,5 +1,7 @@
 import { Component, VERSION } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import {ActivatedRoute} from '@angular/router'
+import { ProjectComponent } from 'src/project/project.component';
 
 
 @Component({
@@ -7,7 +9,14 @@ import {ActivatedRoute} from '@angular/router'
   styleUrls: [ './team.component.css' ],  
   })
 export class TeamComponent  {
-  constructor(private activatedroute:ActivatedRoute)
+  constructor(public dialog: MatDialog,
+    private activatedroute:ActivatedRoute)
   {}
+  openDialog(){
+    this.dialog.open(ProjectComponent,{
+      width: "1200px",
+      height: "600px"
+    });
+  }
 }
 
